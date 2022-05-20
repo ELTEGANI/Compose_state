@@ -32,8 +32,8 @@ fun WellnessTaskItem(taskName: String,onClose: () -> Unit,modifier: Modifier = M
 @Composable
 fun WellnessTaskItem(
     taskName: String,
-    checked:Boolean,
-    onCheckedChange:(Boolean) ->Unit,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
     onClose: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -46,7 +46,10 @@ fun WellnessTaskItem(
                 .padding(start = 16.dp),
             text = taskName
         )
-        Checkbox(checked = checked, onCheckedChange = onCheckedChange)
+        Checkbox(
+            checked = checked,
+            onCheckedChange = onCheckedChange
+        )
         IconButton(onClick = onClose) {
             Icon(Icons.Filled.Close, contentDescription = "Close")
         }
